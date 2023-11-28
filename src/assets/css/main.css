@@ -1,29 +1,32 @@
-
-#chatmessage{
+#chatmessage {
     position: relative;
     width: 400px;
-    margin-top:40px ;
+    margin-top: 40px;
     margin-right: -60px;
     height: 40px;
     padding: 0px 20px;
     border-radius: 50px;
 }
+
 input:focus {
     outline: none;
     border-color: white;
 }
-input{
+
+input {
     border-color: white;
 }
-a{
+
+a {
     text-decoration: none !important;
 }
-.hidder{
+
+.hidder {
     opacity: 0;
     pointer-events: none;
 }
 
-#chatdisplay{
+#chatdisplay {
     margin-top: 50%;
     margin-left: 10%;
     width: 300px;
@@ -32,10 +35,11 @@ a{
 }
 
 #chatdisplay::-webkit-scrollbar {
-    width: 0; /* Hide the default scrollbar */
+    width: 0;
+    /* Hide the default scrollbar */
 }
 
-#bg{
+#bg {
     position: absolute;
     top: 0;
     width: 100vw;
@@ -45,13 +49,13 @@ a{
     background-repeat: no-repeat;
 }
 
-#chatimg{
-    width: 120px ;
+#chatimg {
+    width: 120px;
     height: 120px;
 }
 
 
-#msgbox1{
+#msgbox1 {
     margin-top: 15px;
     margin-left: 20px;
     padding: 10px 30px;
@@ -60,7 +64,7 @@ a{
     border-radius: 30px 30px 30px 0px;
 }
 
-#msgbox2{
+#msgbox2 {
     text-align: right;
     margin-top: 15px;
     padding: 10px 30px;
@@ -69,12 +73,12 @@ a{
     color: rgb(255, 255, 255) !important;
 }
 
-#msg{
+#msg {
     font-size: 15px;
     font-weight: 400 !important;
 }
 
-#button{
+#button {
     z-index: 1;
     font-size: 15px;
     background-color: #007ac3;
@@ -85,14 +89,14 @@ a{
     margin-bottom: 30px;
 }
 
-#btntitle{
+#btntitle {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
 /* card template */
 
-#cardtemplate{
+#cardtemplate {
     display: flex;
     margin: 15% 0 0 5%;
     gap: 15px;
@@ -101,7 +105,7 @@ a{
 
 
 
-#cardmain{
+#cardmain {
     background-color: rgb(255, 255, 255);
     padding: 15px;
     width: 250px;
@@ -109,13 +113,13 @@ a{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-#cardimg{
+#cardimg {
     width: 100%;
     height: 150px;
     border-radius: 10px;
 }
 
-#cardtitle{
+#cardtitle {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 600;
@@ -123,28 +127,26 @@ a{
 }
 
 
-#cardmaintitle{
-    
-}
-#cardsub{
+#cardmaintitle {}
+
+#cardsub {
     font-size: 15;
     font-weight: 400;
 }
 
-#cardbtn{
+#cardbtn {
     font-size: 15px;
     font-weight: 400;
     background-color: #007ac3;
     padding: 10px;
     text-align: center;
     margin-top: 20px;
-    bottom: 40px !important;
     color: white;
 }
 
 /* button template */
 
-#buttontemplate{
+#buttontemplate {
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -153,18 +155,18 @@ a{
     position: absolute;
 }
 
-#buttontemp{
-    background-color: #007ac3 ;
+#buttontemp {
+    background-color: #007ac3;
     font-size: 20px;
     font-weight: 400;
-    padding: 10px 100px ;
+    padding: 10px 100px;
     color: white;
 }
 
 
 /* table template */
 
-#tabletemplate{
+#tabletemplate {
     display: flex;
     margin: 10% 0 0 18%;
     gap: 15px;
@@ -173,35 +175,35 @@ a{
     text-align: center;
 }
 
-#tablemain{
+#tablemain {
     border-radius: 15px;
     width: 600px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-#tablerow{
+#tablerow {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-#tablecontent{
+#tablecontent {
     font-size: 20px;
     font-weight: 400;
     text-align: left;
 }
 
-#tabltitle{
+#tabltitle {
     font-size: 30px;
     font-weight: 500;
     border-radius: 15px 15px 0 0;
-    background-color:#007ac3 ;
+    background-color: #007ac3;
     color: white;
     padding: 10px 0;
 }
 
 
-#TitleCardTemplate{
+#TitleCardTemplate {
     display: flex;
     margin: 12% 40% 0 15%;
     gap: 15px;
@@ -213,13 +215,13 @@ a{
 }
 
 
-#cardtitletemp{
+#cardtitletemp {
     font-size: 15px;
     font-weight: 400;
     text-align: left;
 }
 
-#supercardtitle{
+#supercardtitle {
     font-size: 30px;
     font-weight: 500;
     padding: 20px 0;

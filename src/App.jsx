@@ -18,11 +18,11 @@ const App = () => {
   const [parsedData, setParsedData] = useState([]); // store parsed data
   const [isChatVisible, setIsChatVisible] = useState(false);
 
-    // add bot response in 1 index
-    const botmsg = (newValue) => {
-      addBotmessage([newValue, ...botmessage]);
-    };
-  
+  // add bot response in 1 index
+  const botmsg = (newValue) => {
+    addBotmessage([newValue, ...botmessage]);
+  };
+
 
   // add user input in 1 index
   const usermsg = (newValue) => {
@@ -101,6 +101,7 @@ const App = () => {
       } else {
         if (response.data.data[0].type === "text") {
           if (response.data.data.length < 2) {
+
             botmsg(response.data.data[0].val);
 
           } else {
@@ -184,8 +185,8 @@ const App = () => {
                     content={parsedData.val}
                     btn={parsedData.hyper}
                     playloadhandler={botmsg}
-                    hider={settemp} 
-                    msg={usermsg}/>
+                    hider={settemp}
+                    msg={usermsg} />
                 </div>
 
               </div>
@@ -232,6 +233,7 @@ const App = () => {
                 const elements = [];
                 // const end = Math.min(2, usermessage.length); // Ending index (up to the first 3 elements)
                 for (let i = 0; i < usermessage.length; i++) {
+                  { }
                   elements.push(
                     <div key={i}>
                       <div style={{ display: "flex", justifyContent: "right" }}>
@@ -239,12 +241,15 @@ const App = () => {
                           <h1 id='msg' >{usermessage[i]}</h1>
                         </div>
                       </div>
-
+                      {botmessage[i] === "Typing..." ? (
+                        <div> </div>
+                      ):(
                       <div style={{ display: "flex", justifyContent: "left" }}>
                         <div id='msgbox1' className={isChatVisible ? '' : 'hidder'}>
                           <h1 id='msg'>{botmessage[i]}</h1>
                         </div>
-                      </div>
+                      </div>)}
+
                     </div>
                   );
                 }
