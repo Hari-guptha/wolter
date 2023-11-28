@@ -154,6 +154,7 @@ const App = () => {
                     playload={product.playload}
                     playloadhandler={sendMessage}
                     hider={settemp}
+                    msg={usermsg}
                   />
                 ))}
               </div>
@@ -183,7 +184,8 @@ const App = () => {
                     content={parsedData.val}
                     btn={parsedData.hyper}
                     playloadhandler={botmsg}
-                    hider={settemp} />
+                    hider={settemp} 
+                    msg={usermsg}/>
                 </div>
 
               </div>
@@ -199,6 +201,7 @@ const App = () => {
                     playload={button.playload}
                     playloadhandler={sendMessage}
                     hider={settemp}
+                    msg={usermsg}
                   />
                 ))}
               </div>
