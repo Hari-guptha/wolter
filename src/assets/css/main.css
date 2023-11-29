@@ -1,11 +1,23 @@
 #chatmessage {
     position: relative;
-    width: 400px;
+    width: 300px;
     margin-top: 40px;
     margin-right: -60px;
     height: 40px;
     padding: 0px 20px;
     border-radius: 50px;
+}
+
+#chatcont{
+    background: #ffffff ;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px 20px;margin:0 20px 20px 0;
+}
+
+.newchatcont{
+    background-color: transparent !important;
+    box-shadow:  none !important;
 }
 
 input:focus {
@@ -27,15 +39,17 @@ a {
 }
 
 #chatdisplay {
-    margin-top: 50%;
-    margin-left: 10%;
-    width: 300px;
-    height: 310px !important;
+    margin-top: 0;
+    margin-left: 1%;
+    width: 360px;
+    height: 350px !important;
     overflow: auto;
+    padding: 20px;
 }
 
-#chatdisplay::-webkit-scrollbar {
-    width: 0;
+#chatdisplay::-webkit-scrollbar-track {
+    width: 10px;
+    background-color: rgb(255, 0, 0);
     /* Hide the default scrollbar */
 }
 
@@ -44,6 +58,7 @@ a {
     top: 0;
     width: 100vw;
     height: 100vh;
+    z-index: -1;
     background: url("../img/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -57,7 +72,7 @@ a {
 
 #msgbox1 {
     margin-top: 15px;
-    margin-left: 20px;
+    margin-left: 0px;
     padding: 10px 30px;
     color: white;
     background-color: #007ac3;

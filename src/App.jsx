@@ -17,6 +17,10 @@ const App = () => {
   const [temp, settemp] = useState(false); // store bot chat
   const [parsedData, setParsedData] = useState([]); // store parsed data
   const [isChatVisible, setIsChatVisible] = useState(false);
+  const [isset, setisset] = useState(0);
+
+
+
 
   // add bot response in 1 index
   const botmsg = (newValue) => {
@@ -48,6 +52,7 @@ const App = () => {
     addUsermessage([]);
     addBotmessage([]);
     setIsChatVisible(true);
+    setisset(0)
   };
 
 
@@ -105,9 +110,8 @@ const App = () => {
             botmsg(response.data.data[0].val);
 
           } else {
-
             addBotmessage(prevBotMessages => [
-              response.data.data[0].val + "\n" + response.data.data[1].val,
+              response.data.data[0].val + response.data.data[1].val,
               ...prevBotMessages,
             ]);
           }
@@ -120,6 +124,12 @@ const App = () => {
       console.error('Error:', error);
     }
   };
+
+
+  if(isChatVisible === true && isset === 0 ){
+    sendMessage("get start")
+    setisset(isset + 1)
+  }
 
   // handle enter key press to send msg
   const handleKeyPress = (event) => {
@@ -226,14 +236,13 @@ const App = () => {
 
       <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "flex-end", height: "100vh" }}>
         <div style={{ alignSelf: "flex-end", marginLeft: "auto" }}>
-          <div id='chatcont'>
+          <div id='chatcont' className={isChatVisible ? '' : 'newchatcont'}>
             <div id='chatdisplay' className={isChatVisible ? '' : 'hidder'} style={{ position: "relative", display: "flex", flexDirection: "column-reverse" }}>
               {(() => {
                 // handle the msg displayed by the first three index value
                 const elements = [];
                 // const end = Math.min(2, usermessage.length); // Ending index (up to the first 3 elements)
                 for (let i = 0; i < usermessage.length; i++) {
-                  { }
                   elements.push(
                     <div key={i}>
                       <div style={{ display: "flex", justifyContent: "right" }}>
